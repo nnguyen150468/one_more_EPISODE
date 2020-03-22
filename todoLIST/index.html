@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PLAN YOUR SHIT</h1>
+    <label>Priorities:</label>
+    <select id="priorities">
+  <option id="mostImportant">Most Important!</option>
+  <option id="important">Important!</option>
+  <option id="notImportant">not Improtant</option>
+</select>
+    <input id="todoInput" type="text" placeholder="What you gonna do??" onfocus="this.value=''" />
+    <button onclick="addItem()">add</button>
+    <div>
+        <button id="all">ALL</button>
+        <button id="undone">undone</button>
+        <button id="done">DONE</button>
+    </div>
+    <ul id="resultArea">
+    </ul>
+    <script src="main.js "></script>
+
+</body>
+
+</html>

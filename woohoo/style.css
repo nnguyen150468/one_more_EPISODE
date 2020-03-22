@@ -1,0 +1,115 @@
+body {
+    background-color: rgb(242, 246, 250);
+    font-family: 'Roboto Condensed', sans-serif, monospace;
+}
+
+#pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.navbar {
+    justify-content: space-around;
+}
+
+#charCountArea {
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo {
+    height: 40px;
+    width: 60px;
+}
+
+.postContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.woohoobutton {
+    display: flex;
+    align-items: center;
+}
+
+#tweetOutput {
+    border: 1px solid black;
+    background-color: #7CC6FE;
+    border-radius: 10px;
+    margin: 20px;
+    width: 500px;
+}
+
+.outputTop {
+    display: flex;
+    align-items: flex-end;
+}
+
+.tweetButtons {
+    padding-left: 20px;
+}
+
+.tweetButtons>.btn {
+    background-color: red;
+}
+
+.socIcon {
+    font-size: 20px;
+    padding: 25px;
+}
+
+.firstFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.footerBottom {
+    text-align: center;
+    color: grey;
+}
+
+.footerHover:hover {
+    color: #8789C0;
+}
+
+#footer {
+    bottom: 0;
+}

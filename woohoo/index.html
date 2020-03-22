@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display|Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="content-wrap" style="color:grey;">
+    <nav class="col-sm fixed-top navbar navbar-light" style="background-color: #7CC6FE;">
+        <div class="col-5">
+            <a class="navbar-brand" style="color: whitesmoke;" href="index.html">
+                <img class="logo" src="applogo.png" />OOHOO</a>
+        </div>
+        <div class="col-4">
+            <!-- <form class="form-inline">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <input type="text" placeholder="@Username" aria-label="Username" aria-describedby="basic-addon1" style="border: 1px solid lightblue; border-radius: 5px; padding:5px;">
+                        <i class="fa fa-search btn btn-light" style="border: 1px solid lightblue;border-radius: 5px;color: gray; background-color:lightblue; margin-left: 5px;"></i></div>
+                </div>
+            </form> -->
+        </div>
+        <div class="container col-3" style="display: flex; justify-content: end;">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: grey">Taco</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: grey">Soft drink</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: grey">Quesadilla</a>
+            </li>
+        </div>
+    </nav>
+    <!-- INPUT SECTION -->
+    <!-- Main part -->
+    <section>
+        <div class=" container col-sm-10 postContainer " style="padding-top: 120px; padding-bottom: 30px; ">
+            <div class="col-3 "></div>
+            <div class="col-6 " style="border: 1px solid lightblue; border-radius: 5px; background-color: lightblue;">
+                <div class="card-header " style="height: 40px;background-color:lightblue; border-bottom: 1px solid rgb(242, 246, 250); margin-bottom: 5px; ">
+                    <p>Creat Post</p>
+                </div>
+                <div class=" input-group ">
+                    <textarea onfocus="this.value='' " style="border: 1px solid lightblue; margin: 15px; margin-bottom: 5px; height: 150px; border-radius: 5px; " class="form-control " aria-label="With textarea " id="contentsBox" placeholder="How are you feeling? " maxlength="140 "></textarea>
+                </div>
+                <div class="card-footer text-muted row " style="background-color:lightblue;border-top: 1px solid rgb(242, 246, 250); margin: 15px;margin-bottom: 0; display: flex; justify-content: space-between; align-items: center; ">
+                    <div id="charCountArea ">140 characters remaining</div>
+                    <button onclick="addTweet() " style="border: 1px solid white;background-color:white;color: grey; " class="btn btn-primary woohoobutton " data-toggle="button " aria-pressed="false ">WooHoo</button>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div>
+            <div id="tweetArea"></div>
+        </div>
+    </section>
+
+
+    <footer class="col-xs; " style="height: 230px; padding-top: 120px;">
+        <div class="row col-sm " style="background-color:#7CC6FE;height: 65px; display: flex; text-align: center; align-items: center; color:white ">
+            <h3 class="col-6 ">Connect with your friends!</h3>
+            <div class="iconList col-6 " style="display: flex; justify-content: center; ">
+                <a><i class="fa fa-facebook-f socIcon "></i></a>
+                <a><i class="fa fa-twitter socIcon "></i></a>
+                <a><i class="fa fa-linkedin socIcon "></i></a>
+                <a><i class="fa fa-instagram socIcon "></i></a>
+            </div>
+
+            <body id="content-wrap">
+                <nav class="col-sm fixed-top navbar navbar-light" style="background-color: #7CC6FE;">
+                    <div class="col-4">
+                        <a class=" navbar-brand" style="color: whitesmoke;" href="index.html">
+                            <img class="logo" src="applogo.png" />OOHOO</a>
+                    </div>
+                    <div class="col-2">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <input id="userInput" type="text" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Taco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Soft drink</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quesadilla</a>
+                    </li>
+                </nav>
+
+
+                <!-- OUTPUT SECTION -->
+
+                <!--outputtweet-->
+                <div style="display: flex; justify-content: center;">
+                    <div id="tweetArea"></div>
+                </div>
+
+                <footer>
+                    <div class="container col-sm">
+                        <!--for the info-->
+                        <div class="row col-sm" style="color:#8789C0; display: flex; justify-content: center;">
+                            <div class=" col-3 ">
+                                <div class=" col-9 ">
+                                    <h6 style="font-weight: bold">About</h6>
+                                    <p>
+                                        Donec ut euismod nulla, eget commodo sapien. Quisque vitae enimsed nibh sodab pellentesque nec non magna.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <h6 style="font-weight: bold">Products</h6>
+                                <p>Interdum Ipsum</p>
+                                <p>Porttitor Mauri</p>
+                                <p>Imperdiet Ornare</p>
+                            </div>
+                            <div class="col-2 ">
+                                <h6 style="font-weight: bold">Useful links</h6>
+                                <p>Your Account</p>
+                                <p>Woof Expert</p>
+                                <p>Help</p>
+                            </div>
+                            <div class="col-2 ">
+                                <h6 style="font-weight: bold">Contact</h6>
+                                <p>
+                                    <i class="fa fa-home mr-3" aria-hidden="true"></i> Ho Chi Minh, Vietnam
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope mr-3" aria-hidden="true"></i>info@info.com
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone mr-3" aria-hidden="true"></i>+84 12345678
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footerBottom">© 2020 Copyright <a href="https://github.com/andreceetnn">An</a> | <a href="https://github.com/J-Grigri">Jurgis</a>
+                        </div>
+                </footer>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+                <script src="main.js "></script>
+            </body>
+
+</html>
