@@ -14,6 +14,10 @@ import {
   ListGroup,
   Dropdown
 } from "react-bootstrap";
+import Modal from 'react-modal';
+import YouTube from 'react-youtube';
+
+
 let apiKey = process.env.REACT_APP_myAPIkey;
 let keyWord = "";
 let movieList = [];
@@ -23,10 +27,15 @@ function App() {
   let [movies, setMovies] = useState(null);
   const [genreList, setGenreList] = useState([]);
   let [popularList, setPopularList] = useState([]);
+
+  let [modal, setModal] = useState(false);
+  let [trailer, setTrailer] = useState('');
+
   let currentPlaying = async () => {
     let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${page}`;
     let data = await fetch(url);
     let dataResult = await data.json();
+    console.log('dataResult:', dataResult);
     movieList = movieList.concat(dataResult.results);
     console.log("data bitna get", dataResult.results);
     setMovies(movieList);
@@ -77,6 +86,16 @@ function App() {
     page++;
     currentPlaying();
   };
+
+  let openModal = async (movieID) => {
+    setModal(true);
+    let url = `https://api.themoviedb.org/3/movie/${movieID}/videos?api_key=${apiKey}&language=en-US`
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log('data for videos:', data)
+    console.log('video link:', data.results[0].key)
+    setTrailer(data.results[0].key);
+  }
 
   if (movies == null) {
     return <div>loading the movie</div>;
@@ -214,10 +233,23 @@ function App() {
           style={{ display: "flex", justifyContent: "center" }}
         >
           >
-          <Movie style={{}} movieList={movies} />
+          <Movie style={{}} movieList={movies} openModal={openModal} />
           {/* <Popularity popularList={popularList}/> */}
         </div>
       </div>
+
+      <Modal
+          isOpen={modal}
+          onRequestClose={()=>setModal(false)}
+          // style={customStyles}
+          contentLabel="Example Modal">
+         <YouTube
+        videoId={trailer}
+        autoplay
+        className="video"
+        
+      />
+        </Modal>
 
       <div className="">
         <ListGroup

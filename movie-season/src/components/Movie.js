@@ -30,6 +30,7 @@ export default function Movie(props) {
             {movie.vote_average}
           </Card.Text>
         </Card.Body>
+        <div className="d-flex mt-4 justify-content-center"><a href="#" onClick={()=>props.openModal(movie.id)} className="text-dark">Trailer</a></div>
       </Card>
     );
   });
